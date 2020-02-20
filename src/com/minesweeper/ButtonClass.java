@@ -34,17 +34,17 @@ public class ButtonClass extends JButton {
     {
         return value;
     }
-    public void setLocation(int row, int col)
+    public void setLocation(int row, int col) // sets the location of the tile.
     {
         location = new int[2];
         location[0] = row;
         location[1] = col;
     }
-    public int[] getLocat()
+    public int[] getLocat() // returns location as [row, column]
     {
         return location;
     }
-    public void expose()
+    public void expose() // exposes the current tile
     {
         exposed = true;
         theGame.nonMineTiles--;
@@ -58,7 +58,7 @@ public class ButtonClass extends JButton {
         }
         else if (value == 2)
         {
-            setIcon(theGame.RED_MINE_ICON);
+            setIcon(theGame.TILE_TWO);
         }
         else if (value == 3)
         {
@@ -104,12 +104,12 @@ public class ButtonClass extends JButton {
             theGame.winGame();
         }
     }
-    public boolean isExposed()
+    public boolean isExposed() // returns whether the current tile is exposed
     {
         return exposed;
     }
 
-    public void flag()
+    public void flag() // sets flagged status to opposite status of current
     {
         if (isFlagged == false)
         {
@@ -120,7 +120,7 @@ public class ButtonClass extends JButton {
             isFlagged = false;
         }
     }
-    public boolean isFlagged()
+    public boolean isFlagged() // returns whether flag is flagged
     {
         return isFlagged;
     }

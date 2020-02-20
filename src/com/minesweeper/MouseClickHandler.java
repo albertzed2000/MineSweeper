@@ -46,10 +46,10 @@ public class MouseClickHandler implements MouseListener {
         if (SwingUtilities.isLeftMouseButton(me)) //check if left mouse button has been pressed 
         {
             if(SwingUtilities.isRightMouseButton(me))//check if right mouse button is also being pressed
-            {   //if they're both pressed, then call a function that exposes surrouunding unflagged and covered tiles
+            {   //if they're both pressed, then call a function that exposes surrounding unflagged and covered tiles
                 theGame.exposeSurroundingUnflagged(but.getLocat());
             }
-            if (but.isFlagged() == false)
+            if (but.isFlagged() == false) // if the leftclicked button isn't flagged, expose it
             {
                 but.expose();
                 if (but.value == -1)
